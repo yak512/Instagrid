@@ -26,8 +26,8 @@
 		7410E63021CF71B400F4081B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		745E967721DCF1B6004DE24C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		74AE3D9A21DCF22C00BC8FA3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		74E3045421D8A274007A33D4 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Delm-Medium.otf"; path = "../../../../Downloads/Delm-Medium.otf"; sourceTree = "<group>"; };
-		74E3045521D8A274007A33D4 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ThirstySoftRegular.otf; path = ../../../../Downloads/ThirstySoftRegular.otf; sourceTree = "<group>"; };
+		74E3045421D8A274007A33D4 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
+		74E3045521D8A274007A33D4 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
