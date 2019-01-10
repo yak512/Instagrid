@@ -10,26 +10,56 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    @IBOutlet weak var viewToShare: UIStackView!
+    @IBOutlet weak var viewToShare: UIView!
+    @IBOutlet weak var instagrdLogo: UILabel!
+    @IBOutlet weak var swipeImage: UIImageView!
+    @IBOutlet weak var swipeText: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         let upSwipe = UISwipeGestureRecognizer(target: self, action:#selector(swipeAndShare(swipe :)))
         upSwipe.direction = .up
         view.addGestureRecognizer(upSwipe)
-        
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action:#selector(swipeAndShare(swipe :)))
+        leftSwipe.direction = .left
+        view.addGestureRecognizer(leftSwipe)
+
         // Do any additional setup after loading the view, typically from a nib.
        
     }
     
+    private func whichOrientation() -> Bool {
+        if UIDevice.current.orientation.isPortrait {
+            return true
+        } else {
+        return false
+        }
+    }
+    
+    private func animation() {
+        UIView.animate(withDuration: 0.6, animations: {self.viewToShare.transform = CGAffineTransform(translationX: 0, y: -800)})
+        UIView.animate(withDuration: 1.4, animations: {self.viewToShare.transform = CGAffineTransform(translationX: 0, y: 0)})
+        UIView.animate(withDuration: 0.6, animations: {self.swipeImage.transform = CGAffineTransform(translationX: 0, y: -800)})
+        UIView.animate(withDuration: 1.4, animations: {self.swipeImage.transform = CGAffineTransform(translationX: 0, y: 0)})
+        UIView.animate(withDuration: 0.6, animations: {self.swipeText.transform = CGAffineTransform(translationX: 0, y: -800)})
+        UIView.animate(withDuration: 1.4, animations: {self.swipeText.transform = CGAffineTransform(translationX: 0, y: 0)})
+        UIGraphicsBeginImageContext(viewToShare.frame.size)
+        UIView.animate(withDuration: 1, animations: {self.instagrdLogo.transform = CGAffineTransform(translationX: 0, y: -800)})
+        UIView.animate(withDuration: 1.4, animations: {self.instagrdLogo.transform = CGAffineTransform(translationX: 0, y: 0)})
+    }
+    
    @objc func swipeAndShare(swipe: UISwipeGestureRecognizer) {
-        print("OKKKKKKKKKKKKKKK")
+    
+   
+    if (swipe.direction == .up && whichOrientation() == true) || (swipe.direction == .left && whichOrientation() == false){
+     animation()
     UIGraphicsBeginImageContext(viewToShare.frame.size)
     viewToShare.layer.render(in: UIGraphicsGetCurrentContext()!)
     let image = UIGraphicsGetImageFromCurrentImageContext()
     
     let acivityViewController = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
     present(acivityViewController, animated: true, completion: nil)
+    }
     }
     
     var subButton: UIButton?
@@ -104,7 +134,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         botStackView.addArrangedSubview(newButton())
         botStackView.addArrangedSubview(newButton())
     }
-   
     
     @IBAction func butt2x1(_ sender: Any) {
         
