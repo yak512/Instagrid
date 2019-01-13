@@ -82,45 +82,6 @@
                                     <constraint firstAttribute="width" constant="300" id="ujo-rE-7TH"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6bC-oh-7a1">
-                                <rect key="frame" x="47.5" y="555" width="280" height="80"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0h-Jb-exE">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="Selected" backgroundImage="Layout 1"/>
-                                        <connections>
-                                            <action selector="butt1x2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P8P-oA-rXX"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phu-co-laW">
-                                        <rect key="frame" x="100" y="0.0" width="80" height="80"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" backgroundImage="Layout 2"/>
-                                        <connections>
-                                            <action selector="butt1x2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yFO-oA-0Zu"/>
-                                            <action selector="butt2x1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0j8-TQ-ocK"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Un-EU-y6P">
-                                        <rect key="frame" x="200" y="0.0" width="80" height="80"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="jL0-Lr-Ppm"/>
-                                            <constraint firstAttribute="width" secondItem="9Un-EU-y6P" secondAttribute="height" multiplier="1:1" id="jhm-qc-aoT"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="Layout 3"/>
-                                        <connections>
-                                            <action selector="butt1x2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jrf-GR-cp4"/>
-                                            <action selector="butt2x2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S46-6v-k0k"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="DB2-ga-FqE"/>
-                                    <constraint firstAttribute="width" secondItem="6bC-oh-7a1" secondAttribute="height" multiplier="7:2" id="gIj-0y-Isq"/>
-                                </constraints>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfs-KL-0Os">
                                 <rect key="frame" x="128" y="28" width="119" height="39"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -149,19 +110,59 @@
                                     <constraint firstAttribute="width" constant="15" id="IBO-nx-hAA"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0h-Jb-exE">
+                                <rect key="frame" x="46.5" y="556" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="6pj-Fa-ggb"/>
+                                    <constraint firstAttribute="width" secondItem="u0h-Jb-exE" secondAttribute="height" multiplier="1:1" id="V86-dd-n5e"/>
+                                </constraints>
+                                <state key="normal" image="Selected" backgroundImage="Layout 1"/>
+                                <connections>
+                                    <action selector="butt1x2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P8P-oA-rXX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Un-EU-y6P">
+                                <rect key="frame" x="246.5" y="556" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9Un-EU-y6P" secondAttribute="height" multiplier="1:1" id="Mgj-NI-V7d"/>
+                                    <constraint firstAttribute="width" constant="80" id="s77-FM-GM8"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Layout 3"/>
+                                <connections>
+                                    <action selector="butt1x2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jrf-GR-cp4"/>
+                                    <action selector="butt2x2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S46-6v-k0k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phu-co-laW">
+                                <rect key="frame" x="147.5" y="556" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="Layout 2"/>
+                                <connections>
+                                    <action selector="butt1x2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yFO-oA-0Zu"/>
+                                    <action selector="butt2x1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0j8-TQ-ocK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.71764705882352942" green="0.84313725490196079" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6bC-oh-7a1" secondAttribute="bottom" constant="32" id="5AL-Uc-RMJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Un-EU-y6P" secondAttribute="bottom" constant="31" id="ALa-p7-Cnv"/>
                             <constraint firstItem="2kO-zP-Wjx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Er1-my-AFU"/>
                             <constraint firstItem="YqC-hz-zpi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FK6-wC-4Fy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Phu-co-laW" secondAttribute="bottom" constant="31" id="Jrf-a6-sdz"/>
                             <constraint firstItem="Kfs-KL-0Os" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K2h-D3-GBY"/>
+                            <constraint firstItem="Phu-co-laW" firstAttribute="leading" secondItem="u0h-Jb-exE" secondAttribute="trailing" constant="21" id="MVO-Sf-9Og"/>
                             <constraint firstItem="2kO-zP-Wjx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NQM-Gn-Fsh"/>
+                            <constraint firstItem="9Un-EU-y6P" firstAttribute="leading" secondItem="Phu-co-laW" secondAttribute="trailing" constant="19" id="O0w-9f-M7T"/>
+                            <constraint firstItem="Phu-co-laW" firstAttribute="leading" secondItem="u0h-Jb-exE" secondAttribute="trailing" constant="21" id="Ov3-Z1-M5C"/>
                             <constraint firstItem="2kO-zP-Wjx" firstAttribute="top" secondItem="47u-d0-yJK" secondAttribute="bottom" constant="8" id="Rsw-yH-Egc"/>
                             <constraint firstItem="47u-d0-yJK" firstAttribute="top" secondItem="YqC-hz-zpi" secondAttribute="bottom" constant="11.5" id="ZL7-pX-eLh"/>
+                            <constraint firstItem="9Un-EU-y6P" firstAttribute="leading" secondItem="Phu-co-laW" secondAttribute="trailing" constant="19" id="g96-gH-MWf"/>
                             <constraint firstItem="47u-d0-yJK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jGA-r5-bf3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="u0h-Jb-exE" secondAttribute="bottom" constant="31" id="l0X-eS-P08"/>
                             <constraint firstItem="Kfs-KL-0Os" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="m7d-b6-Fct"/>
-                            <constraint firstItem="6bC-oh-7a1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="unj-8o-NZ1"/>
+                            <constraint firstItem="Phu-co-laW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ysF-d0-JTi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -171,8 +172,6 @@
                         <outlet property="form3" destination="9Un-EU-y6P" id="i3I-aj-qvf"/>
                         <outlet property="instagrdLogo" destination="Kfs-KL-0Os" id="xiQ-a7-ao3"/>
                         <outlet property="mainstack" destination="ERO-k5-oNe" id="hN1-LW-5CN"/>
-                        <outlet property="swipeImage" destination="YqC-hz-zpi" id="pKK-GQ-HfG"/>
-                        <outlet property="swipeText" destination="47u-d0-yJK" id="UyG-ew-wp0"/>
                         <outlet property="viewToShare" destination="2kO-zP-Wjx" id="NAe-lq-KKl"/>
                     </connections>
                 </viewController>
