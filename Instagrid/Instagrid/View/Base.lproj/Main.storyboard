@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -24,11 +24,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2kO-zP-Wjx">
-                                <rect key="frame" x="10" y="134" width="300" height="300"/>
+                                <rect key="frame" x="183.5" y="59" width="300" height="300"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ERO-k5-oNe">
                                         <rect key="frame" x="15" y="15" width="270" height="270"/>
@@ -125,7 +125,7 @@
                                 </variation>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfs-KL-0Os">
-                                <rect key="frame" x="100.5" y="28" width="119" height="39"/>
+                                <rect key="frame" x="276.5" y="11.5" width="114.5" height="37"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Kfs-KL-0Os" secondAttribute="height" multiplier="114:37" id="Cel-aq-yIZ"/>
@@ -158,7 +158,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47u-d0-yJK">
-                                <rect key="frame" x="73" y="98.5" width="174" height="28"/>
+                                <rect key="frame" x="22.5" y="209" width="154" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="47u-d0-yJK" secondAttribute="height" multiplier="199:32" id="Etf-Pv-TLX"/>
                                 </constraints>
@@ -172,7 +172,7 @@
                                 </variation>
                             </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Logo Swipe" translatesAutoresizingMaskIntoConstraints="NO" id="YqC-hz-zpi">
-                                <rect key="frame" x="152.5" y="76.5" width="15" height="10"/>
+                                <rect key="frame" x="92" y="181" width="15" height="10"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="15" id="MF6-8v-Iii"/>
                                     <constraint firstAttribute="width" constant="15" id="ihh-l4-ylI"/>
@@ -195,7 +195,7 @@
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0h-Jb-exE">
-                                <rect key="frame" x="19" y="457" width="80" height="80"/>
+                                <rect key="frame" x="545" y="59" width="80" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="6pj-Fa-ggb"/>
@@ -213,7 +213,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phu-co-laW">
-                                <rect key="frame" x="120" y="457" width="80" height="80"/>
+                                <rect key="frame" x="545" y="169" width="80" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" backgroundImage="Layout 2"/>
                                 <connections>
@@ -222,7 +222,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Un-EU-y6P">
-                                <rect key="frame" x="219" y="457" width="80" height="80"/>
+                                <rect key="frame" x="545" y="279" width="80" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9Un-EU-y6P" secondAttribute="height" multiplier="1:1" id="Mgj-NI-V7d"/>
@@ -301,6 +301,10 @@
                                 <exclude reference="O8c-GL-JUe"/>
                                 <exclude reference="WHe-HD-2VY"/>
                                 <exclude reference="rHZ-1E-bHC"/>
+                                <exclude reference="5mN-Kg-V6G"/>
+                                <exclude reference="gBt-OU-KHO"/>
+                                <exclude reference="Zi2-NF-B3D"/>
+                                <exclude reference="u0D-Rc-lfh"/>
                                 <exclude reference="5Tt-dC-Hil"/>
                                 <exclude reference="Amq-N2-Yvg"/>
                                 <exclude reference="Md5-Be-rHp"/>
@@ -309,10 +313,6 @@
                                 <exclude reference="x3Q-MW-kQo"/>
                                 <exclude reference="PUr-gy-n1z"/>
                                 <exclude reference="oDV-fj-0Kg"/>
-                                <exclude reference="Zi2-NF-B3D"/>
-                                <exclude reference="u0D-Rc-lfh"/>
-                                <exclude reference="5mN-Kg-V6G"/>
-                                <exclude reference="gBt-OU-KHO"/>
                                 <exclude reference="pDX-aw-AWJ"/>
                                 <exclude reference="uAi-Ho-Ap1"/>
                                 <exclude reference="VeN-oG-X2c"/>
@@ -338,6 +338,14 @@
                                 <exclude reference="WHe-HD-2VY"/>
                                 <exclude reference="l0X-eS-P08"/>
                                 <exclude reference="rHZ-1E-bHC"/>
+                                <exclude reference="5mN-Kg-V6G"/>
+                                <exclude reference="K2h-D3-GBY"/>
+                                <include reference="gBt-OU-KHO"/>
+                                <exclude reference="m7d-b6-Fct"/>
+                                <exclude reference="WpE-hp-26I"/>
+                                <include reference="Zi2-NF-B3D"/>
+                                <exclude reference="hrW-hX-Vlj"/>
+                                <include reference="u0D-Rc-lfh"/>
                                 <exclude reference="5Tt-dC-Hil"/>
                                 <include reference="Amq-N2-Yvg"/>
                                 <exclude reference="Er1-my-AFU"/>
@@ -350,14 +358,6 @@
                                 <include reference="PUr-gy-n1z"/>
                                 <exclude reference="Z8C-Ed-JVI"/>
                                 <include reference="oDV-fj-0Kg"/>
-                                <exclude reference="WpE-hp-26I"/>
-                                <include reference="Zi2-NF-B3D"/>
-                                <exclude reference="hrW-hX-Vlj"/>
-                                <include reference="u0D-Rc-lfh"/>
-                                <exclude reference="5mN-Kg-V6G"/>
-                                <exclude reference="K2h-D3-GBY"/>
-                                <include reference="gBt-OU-KHO"/>
-                                <exclude reference="m7d-b6-Fct"/>
                                 <include reference="pDX-aw-AWJ"/>
                                 <exclude reference="uAi-Ho-Ap1"/>
                                 <exclude reference="MVO-Sf-9Og"/>
@@ -382,6 +382,8 @@
                         <outlet property="form3" destination="9Un-EU-y6P" id="i3I-aj-qvf"/>
                         <outlet property="instagrdLogo" destination="Kfs-KL-0Os" id="xiQ-a7-ao3"/>
                         <outlet property="mainstack" destination="ERO-k5-oNe" id="hN1-LW-5CN"/>
+                        <outlet property="swipeImage" destination="YqC-hz-zpi" id="Zw9-ei-EUk"/>
+                        <outlet property="swipeText" destination="47u-d0-yJK" id="KxA-Rd-Ob3"/>
                         <outlet property="viewToShare" destination="2kO-zP-Wjx" id="NAe-lq-KKl"/>
                     </connections>
                 </viewController>
