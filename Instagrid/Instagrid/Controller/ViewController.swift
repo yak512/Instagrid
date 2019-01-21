@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
     @IBOutlet weak var viewToShare: UIView!
     @IBOutlet weak var instagrdLogo: UILabel!
     @IBOutlet weak var swipeImage: UIImageView!
@@ -23,19 +23,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let leftSwipe = UISwipeGestureRecognizer(target: self, action:#selector(swipeAndShare(swipe :)))
         leftSwipe.direction = .left
         view.addGestureRecognizer(leftSwipe)
-
+        
         // Do any additional setup after loading the view, typically from a nib.
-       
+        
     }
     
+    // This function tell use what is the orientation of the Device
     private func whichOrientation() -> Bool {
         if UIDevice.current.orientation.isPortrait {
             return true
         } else {
-        return false
+            return false
         }
     }
     
+    // This function do the animation when whant to share the collage
     private func animation() {
         UIView.animate(withDuration: 0.6, animations: {self.viewToShare.transform = CGAffineTransform(translationX: 0, y: -800)})
         UIView.animate(withDuration: 1.4, animations: {self.viewToShare.transform = CGAffineTransform(translationX: 0, y: 0)})
@@ -48,22 +50,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         UIView.animate(withDuration: 1.4, animations: {self.instagrdLogo.transform = CGAffineTransform(translationX: 0, y: 0)})
     }
     
-   @objc func swipeAndShare(swipe: UISwipeGestureRecognizer) {
-    
-   
-    if (swipe.direction == .up && whichOrientation() == true) || (swipe.direction == .left && whichOrientation() == false){
-     animation()
-    UIGraphicsBeginImageContext(viewToShare.frame.size)
-    viewToShare.layer.render(in: UIGraphicsGetCurrentContext()!)
-    let image = UIGraphicsGetImageFromCurrentImageContext()
-    
-    let acivityViewController = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
-    present(acivityViewController, animated: true, completion: nil)
-    }
+    //This function let us share the collage
+    @objc func swipeAndShare(swipe: UISwipeGestureRecognizer) {
+        
+        
+        if (swipe.direction == .up && whichOrientation() == true) || (swipe.direction == .left && whichOrientation() == false){
+            animation()
+            UIGraphicsBeginImageContext(viewToShare.frame.size)
+            viewToShare.layer.render(in: UIGraphicsGetCurrentContext()!)
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            
+            let acivityViewController = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
+            present(acivityViewController, animated: true, completion: nil)
+        }
     }
     
     var subButton: UIButton?
     
+    //This function let open the photo library of the phone
     @objc func loadImageButtonTapped(sender: UIButton) {
         
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
@@ -76,6 +80,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    //This function let us pick a photo from the photo library
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         let image = info[UIImagePickerController.InfoKey.editedImage] as! UIImage
@@ -84,23 +89,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         subButton?.clipsToBounds = true
         dismiss(animated:true, completion: nil)
     }
-
-    @IBOutlet weak var form1: UIButton!
     
     
+    
+    // This function creat new button
     func newButton() -> UIButton {
-    let image = UIImage(named: "Combined Shape")
-    let newButton = UIButton()
-    newButton.backgroundColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
-    newButton.setImage(image, for: .normal)
-    newButton.addTarget(self, action: #selector(self.loadImageButtonTapped(sender:)), for: .touchUpInside)
-    return newButton
+        let image = UIImage(named: "Combined Shape")
+        let newButton = UIButton()
+        newButton.backgroundColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
+        newButton.setImage(image, for: .normal)
+        newButton.addTarget(self, action: #selector(self.loadImageButtonTapped(sender:)), for: .touchUpInside)
+        newButton.pulsate()
+        return newButton
     }
     
-    private func whichForm() {
-        
-    }
-
+    //This function clear the view of the collage so we can choose another forml of collage
     func clearViews() {
         for subview in topStackView.subviews {
             subview.removeFromSuperview()
@@ -109,6 +112,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             subview.removeFromSuperview()
         }
     }
+    
+    
+    
     
     @IBOutlet weak var mainstack: UIStackView!
     
@@ -120,12 +126,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return mainstack.arrangedSubviews.last as! UIStackView
     }
     
+    
+    
+    
+    @IBOutlet weak var form1: UIButton!
+    
     @IBOutlet weak var form2: UIButton!
     
     @IBOutlet weak var form3: UIButton!
     
+    let image = UIImage(named: "Selected")
+    
     @IBAction func butt1x2(_ sender: Any) {
-        let image = UIImage(named: "Selected")
+        
         form2.setImage(nil, for: .normal)
         form3.setImage(nil, for: .normal)
         form1.setImage(image, for: .normal)
@@ -137,7 +150,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func butt2x1(_ sender: Any) {
         
-        let image = UIImage(named: "Selected")
         form2.setImage(image, for: .normal)
         form3.setImage(nil, for: .normal)
         form1.setImage(nil, for: .normal)
@@ -149,7 +161,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func butt2x2(_ sender: Any) {
         
-        let image = UIImage(named: "Selected")
         form2.setImage(nil, for: .normal)
         form3.setImage(image, for: .normal)
         form1.setImage(nil, for: .normal)
@@ -158,8 +169,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         topStackView.addArrangedSubview(newButton())
         botStackView.addArrangedSubview(newButton())
         botStackView.addArrangedSubview(newButton())
-
-
+        
+        
     }
 }
 
+extension UIButton {
+    
+    func pulsate() {
+        let pulse = CASpringAnimation(keyPath: "transform.scale")
+        pulse.duration = 0.6
+        pulse.fromValue = 0.5
+        pulse.toValue = 0.80
+        pulse.autoreverses = true
+        pulse.repeatCount = 0.7
+        pulse.initialVelocity = 0.9
+        pulse.damping = 1.0
+        layer.add(pulse, forKey: nil)
+    }
+}

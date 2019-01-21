@@ -25,10 +25,6 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIL-q2-gWw">
                                 <rect key="frame" x="108.5" y="307.5" width="158" height="52"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="lIL-q2-gWw" secondAttribute="height" multiplier="79:26" id="6YZ-Zr-EWv"/>
-                                    <constraint firstAttribute="width" constant="158" id="FGK-LM-U8X"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
